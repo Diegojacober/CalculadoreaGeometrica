@@ -1,4 +1,5 @@
 import entities.Quadrado;
+import entities.Retangulo;
 
 import java.util.Scanner;
 
@@ -24,7 +25,11 @@ public class Main {
                                 +" e a área é: "+String.format("%.2f",areaQuadrado));
                         break;
 
-                        
+                    case 2:
+                        Retangulo retangulo = new Retangulo();
+                        retangulo.getDados();
+                        System.out.println(retangulo.printDados());
+                        break;
                 }
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
                 int opcaoFormaEspacial = getFormaEspacial();
