@@ -1,7 +1,4 @@
-import entities.Quadrado;
-import entities.Retangulo;
-import entities.Trapezio;
-import entities.Triangulo;
+import entities.*;
 
 import java.util.Scanner;
 
@@ -53,6 +50,12 @@ public class Main {
                         trapezio.setBaseMenor(baseMenor);
 
                         System.out.println(trapezio.toString());
+                        break;
+                    case 5:
+                        Circulo circulo = new Circulo();
+                        Double raio = getDouble("Digite o tamanho do raio do circulo: ");
+                        circulo.setRaio(raio);
+                        System.out.println(circulo.toString());
                         break;
                 }
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
