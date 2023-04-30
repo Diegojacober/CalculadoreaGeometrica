@@ -18,13 +18,13 @@ public class Quadrado extends OperacoesPlanas{
             this.lados.add(lado);
         }
     }
-
+    @Override
     public Double area(){
         Double area = this.lados.get(0) * this.lados.get(0);
         return area;
     }
 
-
+    @Override
     public Double perimetro() {
         Double perimetro = 0.0;
 

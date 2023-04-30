@@ -2,14 +2,15 @@ package entities;
 
 import java.util.Scanner;
 
-public class Retangulo {
+public class Retangulo extends OperacoesPlanas{
     private Scanner sc = new Scanner(System.in);
     private Double base;
     private Double altura;
+    @Override
     public Double area(){
         return (this.base * this.altura);
     }
-
+    @Override
     public Double perimetro() {
         return (this.base * 2) + (this.altura * 2);
     }

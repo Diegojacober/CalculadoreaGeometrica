@@ -1,5 +1,7 @@
 import entities.Quadrado;
 import entities.Retangulo;
+import entities.Trapezio;
+import entities.Triangulo;
 
 import java.util.Scanner;
 
@@ -24,11 +26,33 @@ public class Main {
                         System.out.println("O perimetro do quadrado é: "+String.format(" %.2f",perimetroQuadrado)
                                 +" e a área é: "+String.format("%.2f",areaQuadrado));
                         break;
-
                     case 2:
                         Retangulo retangulo = new Retangulo();
                         retangulo.getDados();
                         System.out.println(retangulo.printDados());
+                        break;
+                    case 3:
+                        Triangulo triangulo = new Triangulo();
+                        Double baseTriangulo = getDouble("Digite a base do triângulo: ");
+                        Double alturaTriangulo = getDouble("Digite a altura do triângulo: ");
+                        Double ladoTriangulo = getDouble("Digite o tamanho dos lados do triângulo: ");
+                        triangulo.setBase(baseTriangulo);
+                        triangulo.setAltura(alturaTriangulo);
+                        triangulo.setLado(ladoTriangulo);
+                        System.out.println(triangulo.toString());
+                        break;
+                    case 4:
+                        Trapezio trapezio = new Trapezio();
+                        Double baseMaior = getDouble("Digite o tamanho da base maior: ");
+                        Double baseMenor = getDouble("Digite o tamanho da base menor: ");
+                        Double ladoTrapezio = getDouble("Digite o tamanho dos lados: ");
+                        Double alturaTrapezio = getDouble("Digite o tamanho da altura: ");
+                        trapezio.setAltura(alturaTrapezio);
+                        trapezio.setBaseMaior(baseMaior);
+                        trapezio.setLado(ladoTrapezio);
+                        trapezio.setBaseMenor(baseMenor);
+
+                        System.out.println(trapezio.toString());
                         break;
                 }
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
@@ -112,6 +136,28 @@ public class Main {
             }
         }
 
+    }
+
+    public static Double getDouble(String msg) {
+        while (true) {
+            Double valor = 0.0;
+            System.out.print(msg);
+            String val = sc.next();
+
+            try {
+                valor = Double.parseDouble(val);
+            } catch (Exception e) {
+                System.out.println("Digite apenas números!");
+                continue;
+            }
+
+            if (valor < 0) {
+                System.out.println("O valor deve ser maior que 0");
+                continue;
+            }
+
+            return valor;
+        }
     }
 
 
