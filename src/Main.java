@@ -65,6 +65,15 @@ public class Main {
                         pentagono.setLado(ladoPentagono);
                         System.out.println(pentagono.toString());
                         break;
+
+                    case 7:
+                        Parelelogramo parelelogramo = new Parelelogramo();
+                        Double baseParelelogramo = getDouble("Digite o tamanho da base do Parelelogramo: ");
+                        Double alturaParelelogramo = getDouble("Digite o tamanho da altura do Parelelogramo: ");
+                        parelelogramo.setAltura(alturaParelelogramo);
+                        parelelogramo.setBase(baseParelelogramo);
+                        System.out.println(parelelogramo.toString());
+                        break;
                 }
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
                 int opcaoFormaEspacial = getFormaEspacial();
@@ -103,7 +112,7 @@ public class Main {
                     "\n\t [4] Trapezio" +
                     "\n\t [5] Circulo" +
                     "\n\t [6] Pentagono" +
-                    "\n\t [7] Parelelograma\n\nSua opção: ");
+                    "\n\t [7] Parelelogramo\n\nSua opção: ");
             String opc = sc.nextLine();
             try {
                 opcao = Integer.parseInt(opc);
