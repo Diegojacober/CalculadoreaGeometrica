@@ -57,6 +57,14 @@ public class Main {
                         circulo.setRaio(raio);
                         System.out.println(circulo.toString());
                         break;
+                    case 6:
+                        Pentagono pentagono = new Pentagono();
+                        Double apotema = getDouble("Digite o tamanho do apotema do Pentagono: ");
+                        Double ladoPentagono = getDouble("Digite o tamanho do lado do Pentagano: ");
+                        pentagono.setApotema(apotema);
+                        pentagono.setLado(ladoPentagono);
+                        System.out.println(pentagono.toString());
+                        break;
                 }
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
                 int opcaoFormaEspacial = getFormaEspacial();
