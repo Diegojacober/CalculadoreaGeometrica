@@ -78,6 +78,14 @@ public class Main {
             } else if (opcaoPlanaEspacial.equals("ESPACIAL")) {
                 int opcaoFormaEspacial = getFormaEspacial();
 
+                switch (opcaoFormaEspacial) {
+
+                    case 1:
+                        
+                        break;
+
+                }
+
                 System.out.println(opcaoFormaEspacial);
             }
         }
