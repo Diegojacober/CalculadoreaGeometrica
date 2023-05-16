@@ -81,12 +81,55 @@ public class Main {
                 switch (opcaoFormaEspacial) {
 
                     case 1:
-                        
+                        //cone
+                        Cone cone = new Cone();
+                        Double geratrizCone = getDouble("Digite o tamanho da geratriz do cone: ");
+                        Double alturaCone = getDouble("Digite o tamanho da altura do cone: ");
+                        Double raioCone = getDouble("Digite o tamanho do raio do cone: ");
+                        cone.setGeratriz(geratrizCone);
+                        cone.setRaio(raioCone);
+                        cone.setAltura(alturaCone);
+                        System.out.println(cone.toString());
                         break;
-
+                    case 2:
+                        Esfera esfera = new Esfera();
+                        Double raioEsfera = getDouble("Digite o tamanho do raio da esfera: ");
+                        esfera.setRaio(raioEsfera);
+                        System.out.println(esfera.toString());
+                        break;
+                    case 3:
+                        Piramide piramide = new Piramide();
+                        Double alturaPiramide = getDouble("Digite a altura da pirâmide: ");
+                        Double ladoBasePiramide = getDouble("Digite o tamanho da base lateral da pirâmide: ");
+                        piramide.setAltura(alturaPiramide);
+                        piramide.setLadoBase(ladoBasePiramide);
+                        System.out.println(piramide.toString());
+                        break;
+                    case 4:
+                        Cubo cubo = new Cubo();
+                        Double arestaCubo = getDouble("Digite o tamanho da aresta do cubo: ");
+                        cubo.setAresta(arestaCubo);
+                        System.out.println(cubo.toString());
+                        break;
+                    case 5:
+                        Paralelepipedo paralelepipedo = new Paralelepipedo();
+                        Double arestaA = getDouble("Digite o tamanho da aresta A: ");
+                        Double arestaB = getDouble("Digite o tamanho da aresta B: ");
+                        Double arestaC = getDouble("Digite o tamanho da aresta C: ");
+                        paralelepipedo.setArestaA(arestaA);
+                        paralelepipedo.setArestaB(arestaB);
+                        paralelepipedo.setArestaC(arestaC);
+                        System.out.println(paralelepipedo.toString());
+                        break;
+                    case 6:
+                        Cilindro cilindro = new Cilindro();
+                        Double raioCilindro = getDouble("Digite o tamanho do raio: ");
+                        Double alturaCilindro = getDouble("Digite o tamanho da altura: ");
+                        cilindro.setAltura(alturaCilindro);
+                        cilindro.setRaio(raioCilindro);
+                        System.out.println(cilindro.toString());
+                        break;
                 }
-
-                System.out.println(opcaoFormaEspacial);
             }
         }
 
@@ -148,8 +191,7 @@ public class Main {
                     "\n\t [3] Pirâmide" +
                     "\n\t [4] Cubo" +
                     "\n\t [5] Paralelepípedo" +
-                    "\n\t [6] Prismas" +
-                    "\n\t [7] Cilindro\n\nSua opção: ");
+                    "\n\t [6] Cilindro\n\nSua opção: ");
             String opc = sc.nextLine();
             try {
                 opcao = Integer.parseInt(opc);
